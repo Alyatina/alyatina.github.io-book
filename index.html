@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Замовлення книги</title>
+</head>
+<body>
+    <div class="container">
+    <header>
+        <h1>Замовлення книги</h1>
+        <nav role="navigation" aria-label="Меню книгарні">
+            <a href="#main">Головна</a>
+            <a href="#catalog">Каталог</a>
+            <a href="#contacts">Контакти</a>
+        </nav>
+    </header>
+    <main>
+        <form class="order-form">
+            <label for="name">Ім'я:</label><br>
+            <input id="name" type="text" required minlength="2" aria-required="true" aria-describedby="name-error"><br>
+            <span id="name-error" aria-live="polite">Введіть ім'я</span><br>
+            <laber for="surname">Прізвище:</laber><br>
+            <input id="surname" type="text" required minlength="2" aria-required="true" aria-describedby="surname-error"><br>
+            <span id="surname-error" aria-live="polite">Введіть прізвище</span><br>
+            <laber for="tel">Телефон:</laber><br>
+            <input type="tel" required pattern="\+380[0-9]{9}" aria-required="true" aria-describedby="tel-error"><br>
+            <span id="tel-error" aria-live="polite">Введіть коректний номер</span><br>
+            <laber for="email">Email:</laber><br>
+            <input id="email" type="email" required aria-required="true" aria-describedby="email-error"><br>
+            <span id="email-error" aria-live="polite">Введіть коректний email</span><br>
+            <label for="region">Область:</label><br>
+            <select id="region" name="region" required aria-required="true">
+                <option value="">Оберіть область</option>
+                <option value="kyiv">Київська</option>
+                <option value="lviv">Львівська</option>
+                <option value="odesa">Одеська</option>
+            </select><br>
+            <label for="city">Оберіть місто:</label><br>
+            <select id="city" name="city" required aria-required="true">
+                <option value="">Оберіть місто</option>
+                <option value="kyiv">Київ</option>
+                <option value="lviv">Львів</option>
+                <option value="odesa">Одеса</option>
+            </select>
+            <fieldset>
+                <legend>Спосіб доставки:</legend>
+                <input type="radio" id="courier" name="delivery" value="courier" required aria-required="true">
+                <label for="courier">Кур'єр</label>
+                <input type="radio" id="post" name="delivery" value="post" required aria-required="true">
+                <label for="post">Пошта</label>
+            </fieldset>
+            <fieldset>
+                <legend>Спосіб оплати:</legend>
+                <input type="radio" id="card" name="payment" value="card" required aria-required="true">
+                <label for="card">Картка</label>
+                <input type="radio" id="cash" name="payment" value="cash" required aria-required="true">
+                <label for="cash">Готівка</label>
+            </fieldset>
+            <label>
+                <input type="checkbox" required aria-required="true" aria-label="Ознайомлений з умовами">Ознайомлений з умовами
+            </label><br>
+            <button type="submit" aria-label="Оформити замовлення">Оформити</button>
+        </form>
+        <aside>
+            <h2>1984</h2>
+            <img src="img/1984.jpg" alt="Обкладинка книги">
+            <p>Ціна: 250 грн</p>
+            <p>Статус: В наявності</p>
+            <p>Гарантія: 14 днів на повернення</p>
+            <p>Постачальник: Видавництво: X</p>
+        </aside>
+    </main>
+    <footer>
+        <p>© 2025 Книгарня</p>
+    </footer>
+</body>
+</div>
+</html>
